@@ -41,11 +41,11 @@
                         $v = $dataTickers["tick"];
 
                         $arrayReturn[$y]["symbol"] = $symbol;
-                        $arrayReturn[$y]["ask"] = number_format($v["ask"][0],$vs["tickSize"]);
-                        $arrayReturn[$y]["bid"] = number_format($v["bid"][0],$vs["tickSize"]);
-                        $arrayReturn[$y]["low"] = number_format($v["low"],$vs["tickSize"]);
-                        $arrayReturn[$y]["high"] = number_format($v["high"],$vs["tickSize"]);
-                        $arrayReturn[$y]["last"] = number_format($v["close"],$vs["tickSize"]);
+                        $arrayReturn[$y]["ask"] = number_format($v["ask"][0],$vs["tickSize"], ".", "");
+                        $arrayReturn[$y]["bid"] = number_format($v["bid"][0],$vs["tickSize"], ".", "");
+                        $arrayReturn[$y]["low"] = number_format($v["low"],$vs["tickSize"], ".", "");
+                        $arrayReturn[$y]["high"] = number_format($v["high"],$vs["tickSize"], ".", "");
+                        $arrayReturn[$y]["last"] = number_format($v["close"],$vs["tickSize"], ".", "");
                         $arrayReturn[$y]["volume"] = (!empty($v["vol"])) ? $v["vol"] : 0;
 
                         $y++;
